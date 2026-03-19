@@ -67,11 +67,11 @@ const App = () => {
     <div>
       <h1 className="text-5xl text-center font-bold mt-4 mb-3">Choose Your Plan</h1>
       <p className="text-[20px] text-center font-semibold text-gray-400 mb-5">No contracts, No suprise fees.</p>
-      <div className="flex justify-center gap-10 rounded-full shadow-lg w-2/12 mx-auto px-3 py-2 mb-8">
-        <button id="monthly" onClick={(e)=>{toggolingBtn(e)}} className="btn bg-[#5d31e0] px-6 py-3 rounded-full text-white font-semibold cursor-pointer">Monthly</button>
+      <div className="flex justify-center gap-8 rounded-full shadow-lg w-7/12 md:w-2/12 mx-auto px-2 md:px-7 py-2 mb-8">
+        <button id="monthly" onClick={(e)=>{toggolingBtn(e)}} className="btn bg-[#5d31e0] px-2 md:px-7 py-3 rounded-full text-white font-semibold cursor-pointer">Monthly</button>
         <button id="yearly" onClick={(e)=>{toggolingBtn(e)}} className="btn px-6  py-3 rounded-full font-semibold cursor-pointer">Yearly</button>
       </div>
-      <div className="grid grid-cols-3 gap-3 px-6 justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3 px-6 justify-center">
         {
           pricingPlans.map(el=><Pricingcards key={el.price} name={el.name} price={el.price} duration={el.duration} description={el.description} features={el.features} unavailableFeatures={el.unavailableFeatures} highlighted={el.highlighted} />)
         }
